@@ -260,7 +260,7 @@ Para aplicar los cambios, se reinició el demonio y se verificó que el servidor
 > ![Captura del estado del servicio Bind9 y el puerto 53 abierto](imagenes/dns_status_netstat1.png)
 > ![Captura del estado del servicio Bind9 y el puerto 53 abierto](imagenes/dns_status_netstat2.png)
 > ![Captura del estado del servicio Bind9 y el puerto 53 abierto](imagenes/Imagen18.png)
-> ![Captura del estado del servicio Bind9 y el puerto 53 abierto](imagenes/imagen19.png)
+> ![Captura del estado del servicio Bind9 y el puerto 53 abierto](imagenes/Imagen19.png)
 
 ---
 
@@ -367,6 +367,7 @@ Se editó el archivo `hosts` del sistema anfitrión para vincular el dominio `ww
 * **Ruta Windows:** `C:\Windows\System32\drivers\etc\hosts`
 
 > ![Captura de pantalla: Edición del archivo hosts con el mapeo del dominio a 127.0.0.1](imagenes/windows_hosts_edit.png)
+
 > ![Captura de pantalla: Edición del archivo hosts con el mapeo del dominio a 127.0.0.1](imagenes/Imagen29_1.png)
 
 #### B. Acceso vía Navegador Web
