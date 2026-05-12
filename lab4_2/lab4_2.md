@@ -130,8 +130,8 @@ El servidor DNS actúa como el nodo central. Se configuró la interfaz `enp0s3` 
 > ![Captura de pantalla: Edición de Netplan en la VM DNS y aplicación de cambios](imagenes/dns_netplan.png)
 > ![Captura de pantalla: Edición de Netplan en la VM DNS y aplicación de cambios](imagenes/dns_netplan1.png)
 > ![Captura de pantalla: Edición de Netplan en la VM DNS y aplicación de cambios](imagenes/dns_netplan2.png)
- ![Captura de pantalla: Edición de Netplan en la VM DNS y aplicación de cambios](imagenes/imagen1.png)
- ![Captura de pantalla: Edición de Netplan en la VM DNS y aplicación de cambios](imagenes/imagen3.png)
+> ![Captura de pantalla: Edición de Netplan en la VM DNS y aplicación de cambios](imagenes/Imagen1.png)
+> ![Captura de pantalla: Edición de Netplan en la VM DNS y aplicación de cambios](imagenes/Imagen3.png)
 
 
 #### B. Configuración en la VM Lab4.2-Web
@@ -140,8 +140,8 @@ Se configuró la IP estática `.3`. Un punto crítico aquí fue definir la **rut
 > ![Captura de pantalla: Configuración de red en la VM Web y comando netplan apply](imagenes/web_netplan.png)
 > ![Captura de pantalla: Configuración de red en la VM Web y comando netplan apply](imagenes/web_netplan1.png)
 > ![Captura de pantalla: Configuración de red en la VM Web y comando netplan apply](imagenes/web_netplan2.png)
-> ![Captura de pantalla: Configuración de red en la VM Web y comando netplan apply](imagenes/imagen5.png)
-> ![Captura de pantalla: Configuración de red en la VM Web y comando netplan apply](imagenes/imagen6.png)
+> ![Captura de pantalla: Configuración de red en la VM Web y comando netplan apply](imagenes/Imagen5.png)
+> ![Captura de pantalla: Configuración de red en la VM Web y comando netplan apply](imagenes/Imagen6.png)
 
 
 #### C. Configuración en la VM Lab4.2-Client
@@ -150,8 +150,8 @@ Se asignó la IP `.4`. Al igual que en la VM Web, el servidor DNS se configuró 
 > ![Captura de pantalla: Configuración de red estática en la VM Cliente](imagenes/client_netplan.png)
 > ![Captura de pantalla: Configuración de red estática en la VM Cliente](imagenes/client_netplan1.png)
 > ![Captura de pantalla: Configuración de red estática en la VM Cliente](imagenes/client_netplan2.png)
-> ![Captura de pantalla: Configuración de red estática en la VM Cliente](imagenes/imagen7.png)
-> ![Captura de pantalla: Configuración de red estática en la VM Cliente](imagenes/imagen8.png)
+> ![Captura de pantalla: Configuración de red estática en la VM Cliente](imagenes/Imagen7.png)
+> ![Captura de pantalla: Configuración de red estática en la VM Cliente](imagenes/Imagen8.png)
 
 ---
 
@@ -168,9 +168,9 @@ Por defecto, Linux bloquea el paso de paquetes entre interfaces por seguridad. S
 > ![Captura de pantalla: Edición de sysctl.conf y ejecución de sudo sysctl -p](imagenes/sysctl_forward.png)
 > ![Captura de pantalla: Edición de sysctl.conf y ejecución de sudo sysctl -p](imagenes/sysctl_forward1.png)
 > ![Captura de pantalla: Edición de sysctl.conf y ejecución de sudo sysctl -p](imagenes/sysctl_forward2.png)
-> ![Captura de pantalla: Edición de sysctl.conf y ejecución de sudo sysctl -p](imagenes/imagen9.png)
-> ![Captura de pantalla:  Edición de sysctl.conf y ejecución de sudo sysctl -p](imagenes/imagen10.png)
-> ![Captura de pantalla:  Edición de sysctl.conf y ejecución de sudo sysctl -p](imagenes/imagen11.png)
+> ![Captura de pantalla: Edición de sysctl.conf y ejecución de sudo sysctl -p](imagenes/Imagen9.png)
+> ![Captura de pantalla:  Edición de sysctl.conf y ejecución de sudo sysctl -p](imagenes/Imagen10.png)
+> ![Captura de pantalla:  Edición de sysctl.conf y ejecución de sudo sysctl -p](imagenes/Imagen11.png)
 
 #### B. Configuración de Reglas de IPTables (NAT)
 Se aplicó una regla de **Enmascaramiento (MASQUERADE)**. Esto permite que las máquinas internas (Web y Client) "salgan" a Internet usando la IP pública de la VM DNS.
@@ -182,7 +182,7 @@ Se aplicó una regla de **Enmascaramiento (MASQUERADE)**. Esto permite que las m
     * `-j MASQUERADE`: Traduce las IPs internas a la IP de la interfaz de salida.
 
 > ![Captura de pantalla: Aplicación de la regla de NAT en IPTables](imagenes/iptables_nat.png)
-> ![Captura de pantalla: Edición de Netplan en la VM DNS y aplicación de cambios](imagenes/imagen11_1.png)
+> ![Captura de pantalla: Edición de Netplan en la VM DNS y aplicación de cambios](imagenes/Imagen11_1.png)
 #### C. Persistencia de la Configuración
 Las reglas de `iptables` se borran al reiniciar. Para evitar esto, se instaló un servicio que las carga automáticamente al arrancar el sistema.
 
@@ -191,8 +191,8 @@ Las reglas de `iptables` se borran al reiniciar. Para evitar esto, se instaló u
 
 > ![Captura de pantalla: Instalación y guardado persistente de las reglas de red](imagenes/iptables_save.png)
 > ![Captura de pantalla: Instalación y guardado persistente de las reglas de red](imagenes/iptables_save1.png)
-> ![Captura de pantalla: Instalación y guardado persistente de las reglas de red](imagenes/imagen11_2.png)
-> ![Captura de pantalla: Instalación y guardado persistente de las reglas de red](imagenes/imagen12.png)
+> ![Captura de pantalla: Instalación y guardado persistente de las reglas de red](imagenes/Imagen11_2.png)
+> ![Captura de pantalla: Instalación y guardado persistente de las reglas de red](imagenes/Imagen12.png)
 ---
 
 ## 5. Ejercicio 2: Instalación y Configuración de BIND9 (VM Lab4.2-DNS)
@@ -207,7 +207,7 @@ Se procedió a la instalación del paquete **BIND9**, junto con utilidades de di
     * `bind9utils`: Herramientas de verificación como `named-checkconf`.
 
 > ![Captura de la terminal instalando los paquetes de BIND9 y dependencias](imagenes/dns_install.png)
-> ![Captura de la terminal instalando los paquetes de BIND9 y dependencias](imagenes/imagen13.png)
+> ![Captura de la terminal instalando los paquetes de BIND9 y dependencias](imagenes/Imagen13.png)
 ---
 
 ### 5.2. Definición de la Zona Maestra
@@ -217,8 +217,8 @@ Se configuró el archivo `named.conf.local` para informar al servidor que es la 
 
 > ![Captura editando named.conf.local con el bloque de la zona lab42.local](imagenes/dns_conf_local.png)
 > ![Captura editando named.conf.local con el bloque de la zona lab42.local](imagenes/dns_conf_local1.png)
-> ![Captura editando named.conf.local con el bloque de la zona lab42.local](imagenes/imagen14.png)
-> ![Captura editando named.conf.local con el bloque de la zona lab42.local](imagenes/imagen15.png)
+> ![Captura editando named.conf.local con el bloque de la zona lab42.local](imagenes/Imagen14.png)
+> ![Captura editando named.conf.local con el bloque de la zona lab42.local](imagenes/Imagen15.png)
 
 ---
 
@@ -235,8 +235,8 @@ Se creó el archivo de base de datos de la zona a partir de una plantilla. Este 
 
 > ![Captura del contenido del archivo db.lab42.local con los registros A y CNAME](imagenes/dns_db_zone.png)
 > ![Captura del contenido del archivo db.lab42.local con los registros A y CNAME](imagenes/dns_db_zone1.png)
-> ![Captura del contenido del archivo db.lab42.local con los registros A y CNAME](imagenes/imagen16.png)
-> ![Captura del contenido del archivo db.lab42.local con los registros A y CNAME](imagenes/imagen17.png)
+> ![Captura del contenido del archivo db.lab42.local con los registros A y CNAME](imagenes/Imagen16.png)
+> ![Captura del contenido del archivo db.lab42.local con los registros A y CNAME](imagenes/Imagen17.png)
 ---
 
 ### 5.4. Verificación de Sintaxis y Estado del Servicio
@@ -247,7 +247,7 @@ Antes de activar la configuración, se utilizaron herramientas de validación pa
 
 > ![Captura de los comandos de verificación mostrando el mensaje OK](imagenes/dns_check.png)
 > ![Captura de los comandos de verificación mostrando el mensaje OK](imagenes/dns_check1.png)
-> ![Captura de los comandos de verificación mostrando el mensaje OK](imagenes/imagen18_1.png)
+> ![Captura de los comandos de verificación mostrando el mensaje OK](imagenes/Imagen18_1.png)
 
 
 **Reinicio y comprobación de puertos:**
@@ -259,7 +259,7 @@ Para aplicar los cambios, se reinició el demonio y se verificó que el servidor
 > ![Captura del estado del servicio Bind9 y el puerto 53 abierto](imagenes/dns_status_netstat.png)
 > ![Captura del estado del servicio Bind9 y el puerto 53 abierto](imagenes/dns_status_netstat1.png)
 > ![Captura del estado del servicio Bind9 y el puerto 53 abierto](imagenes/dns_status_netstat2.png)
-> ![Captura del estado del servicio Bind9 y el puerto 53 abierto](imagenes/imagen18.png)
+> ![Captura del estado del servicio Bind9 y el puerto 53 abierto](imagenes/Imagen18.png)
 > ![Captura del estado del servicio Bind9 y el puerto 53 abierto](imagenes/imagen19.png)
 
 ---
@@ -277,9 +277,9 @@ Se instaló el servidor web y se habilitó para que el servicio se inicie autom�
 > ![Captura de la terminal instalando Nginx y verificando su inicio automático](imagenes/web_install_nginx.png)
 > ![Captura de la terminal instalando Nginx y verificando su inicio automático](imagenes/web_install1_nginx.png)
 > ![Captura de la terminal instalando Nginx y verificando su inicio automático](imagenes/web_install2_nginx.png)
-> ![Captura de la terminal instalando Nginx y verificando su inicio automático](imagenes/imagen20.png)
-> ![Captura de la terminal instalando Nginx y verificando su inicio automático](imagenes/imagen21.png)
-> ![Captura de la terminal instalando Nginx y verificando su inicio automático](imagenes/imagen22.png)
+> ![Captura de la terminal instalando Nginx y verificando su inicio automático](imagenes/Imagen20.png)
+> ![Captura de la terminal instalando Nginx y verificando su inicio automático](imagenes/Imagen21.png)
+> ![Captura de la terminal instalando Nginx y verificando su inicio automático](imagenes/Imagen22.png)
 
 ---
 
@@ -294,8 +294,8 @@ Para que el servidor responda correctamente a las peticiones del dominio `www.la
 
 > ![Captura del archivo de configuración del Virtual Host para lab42.local](imagenes/web_vhost_config.png)
 > ![Captura del archivo de configuración del Virtual Host para lab42.local](imagenes/web_vhost_config1.png)
-> ![Captura del archivo de configuración del Virtual Host para lab42.local](imagenes/imagen23.png)
-> ![Captura del archivo de configuración del Virtual Host para lab42.local](imagenes/imagen24.png)
+> ![Captura del archivo de configuración del Virtual Host para lab42.local](imagenes/Imagen23.png)
+> ![Captura del archivo de configuración del Virtual Host para lab42.local](imagenes/Imagen24.png)
 
 ---
 
@@ -308,14 +308,14 @@ Se procedió a crear la estructura de directorios y a vincular la configuración
 > ![Captura de activacion del sitio y crear contenido](imagenes/web_content_creation2.png)
 > ![Captura de activacion del sitio y crear contenido](imagenes/web_content_creation.png)
 > ![Captura de activacion del sitio y crear contenido](imagenes/web_content_creation1.png)
-> ![Captura de activacion del sitio y crear contenido](imagenes/imagen25.png)
+> ![Captura de activacion del sitio y crear contenido](imagenes/Imagen25.png)
 
 **Creación del index.html:**
 Se generó una página de prueba personalizada mediante comandos de redirección de texto.
 
 > ![Captura creando el directorio raíz y el archivo index.html personalizado](imagenes/sudo_bash_c_echo.png)
 > ![Captura creando el directorio raíz y el archivo index.html personalizado](imagenes/sudo_bash_c_echo.png)
-> ![Captura creando el directorio raíz y el archivo index.html personalizado](imagenes/imagen25_1.png)
+> ![Captura creando el directorio raíz y el archivo index.html personalizado](imagenes/Imagen25_1.png)
 
 ---
 
@@ -327,7 +327,7 @@ Antes de aplicar cambios en producción, se validó que no existieran errores en
 
 > ![Captura de la ejecución de nginx -t con resultado exitoso y reinicio del servicio](imagenes/web_nginx_test.png)
 > ![Captura de la ejecución de nginx -t con resultado exitoso y reinicio del servicio](imagenes/web_nginx_test1.png)
-> ![Captura de la ejecución de nginx -t con resultado exitoso y reinicio del servicio](imagenes/imagen25_2.png)
+> ![Captura de la ejecución de nginx -t con resultado exitoso y reinicio del servicio](imagenes/Imagen25_2.png)
 
 ---
 
@@ -346,8 +346,8 @@ Se utilizaron las herramientas `dig` y `nslookup` para confirmar que el servidor
 
 > ![Captura de pantalla: Resultados de dig y nslookup desde la VM Cliente](imagenes/client_dns_test.png)
 > ![Captura de pantalla: Resultados de dig y nslookup desde la VM Cliente](imagenes/client_dns_test1.png)
-> ![Captura de pantalla: Resultados de dig y nslookup desde la VM Cliente](imagenes/imagen26.png)
-> ![Captura de pantalla: Resultados de dig y nslookup desde la VM Cliente](imagenes/imagen27.png)
+> ![Captura de pantalla: Resultados de dig y nslookup desde la VM Cliente](imagenes/Imagen26.png)
+> ![Captura de pantalla: Resultados de dig y nslookup desde la VM Cliente](imagenes/Imagen27.png)
  
 #### B. Acceso HTTP vía Dominio
 Se ejecutó una petición mediante `curl` para verificar que el servidor Nginx sirve la página personalizada a través de la red interna.
@@ -355,7 +355,7 @@ Se ejecutó una petición mediante `curl` para verificar que el servidor Nginx s
 * **Comando:** `curl http://www.lab42.local`
 
 > ![Captura de pantalla: Respuesta del comando curl mostrando el HTML de bienvenida](imagenes/client_curl_test.png)
-> ![Captura de pantalla: Respuesta del comando curl mostrando el HTML de bienvenida](imagenes/imagen28_1.png)
+> ![Captura de pantalla: Respuesta del comando curl mostrando el HTML de bienvenida](imagenes/Imagen28_1.png)
 ---
 
 ### 7.2. Validación desde la PC Anfitriona (Acceso Externo)
@@ -367,13 +367,13 @@ Se editó el archivo `hosts` del sistema anfitrión para vincular el dominio `ww
 * **Ruta Windows:** `C:\Windows\System32\drivers\etc\hosts`
 
 > ![Captura de pantalla: Edición del archivo hosts con el mapeo del dominio a 127.0.0.1](imagenes/windows_hosts_edit.png)
-> ![Captura de pantalla: Edición del archivo hosts con el mapeo del dominio a 127.0.0.1](imagenes/imagen29_1.png)
+> ![Captura de pantalla: Edición del archivo hosts con el mapeo del dominio a 127.0.0.1](imagenes/Imagen29_1.png)
 
 #### B. Acceso vía Navegador Web
 Finalmente, se accedió a la dirección `http://www.lab42.local:8888`. Gracias al **Reenvío de Puertos** configurado en VirtualBox, el tráfico fue dirigido desde el puerto anfitrión `8888` al puerto `80` de la VM Web interna.
 
 > ![Captura de pantalla completa: Navegador web mostrando la página de bienvenida de lab42.local](imagenes/final_browser_test.png)
-> ![Captura de pantalla completa: Navegador web mostrando la página de bienvenida de lab42.local](imagenes/imagen30.png)
+> ![Captura de pantalla completa: Navegador web mostrando la página de bienvenida de lab42.local](imagenes/Imagen30.png)
 ---
 
 ## 8. Sección 3: PRACTICA EN GRUPO
@@ -392,7 +392,7 @@ Para el despliegue funcional, se han dividido las responsabilidades de configura
 > **Nota Técnica:** La selección del modo **Puente (Bridge)** en VirtualBox es fundamental para esta práctica. A diferencia del modo NAT, este permite que la interfaz virtual de la VM obtenga una dirección IP directamente de la infraestructura física del aula. Esto otorga una identidad propia a cada servidor dentro de la LAN, permitiendo que las consultas DNS y las peticiones HTTP crucen entre las PC físicas de los estudiantes.
 
 > ![Captura de VirtualBox mostrando la configuración del Adaptador 1 en modo Puente](imagenes/vbox_bridge_setup.png)
-> ![Captura de VirtualBox mostrando la configuración del Adaptador 1 en modo Puente](imagenes/imagen31.png)
+> ![Captura de VirtualBox mostrando la configuración del Adaptador 1 en modo Puente](imagenes/Imagen31.png)
 ---
 
 ### 8.2. Dominio Local del Grupo
@@ -404,7 +404,7 @@ Se ha definido un dominio exclusivo para el grupo con el fin de evitar colisione
 
 **Restricción de Unicidad:** Para cumplir con los requerimientos del docente, el dominio elegido ha sido validado como único. Esto asegura que no existan duplicados en las tablas de búsqueda de otros grupos, permitiendo una navegación limpia y sin conflictos de red entre los equipos de trabajo.
 
-> ![Captura editando el archivo named.conf.local con el nuevo dominio elegido](imagenes/imagen32.png)
+> ![Captura editando el archivo named.conf.local con el nuevo dominio elegido](imagenes/Imagen32.png)
 
 ### 8.3. Tareas del Integrante 1 (Servidor DNS)
 
@@ -413,7 +413,7 @@ El Integrante 1 asumió la responsabilidad de gestionar la resolución de nombre
 #### A. Configuración de Red e Instalación
 Se configuró la VM DNS en **modo Puente**, asignando una dirección IP estática dentro del rango proporcionado por el docente para la red del laboratorio. Posteriormente, se realizó la instalación y despliegue de **BIND9**.
 
-> ![Captura de la terminal con el comando ip a mostrando la IP física asignada en modo Puente](imagenes/imagen33.png)
+> ![Captura de la terminal con el comando ip a mostrando la IP física asignada en modo Puente](imagenes/Imagen33.png)
 
 #### B. Configuración de la Zona Directa
 Se editó el archivo de zona para el dominio del grupo, vinculando los nombres de host con las direcciones IP físicas de ambos integrantes.
@@ -423,7 +423,7 @@ Se editó el archivo de zona para el dominio del grupo, vinculando los nombres d
 * **Registro A (www):** Apunta a la IP del Integrante 2 (Servidor Web).
 * **Registro CNAME (web):** Alias para redireccionar el tráfico de `web.[dominio]` hacia `www`.
 
-> ![Captura del archivo de zona directa db.[dominio] con los registros A y CNAME configurados](imagenes/imagen34.png)
+> ![Captura del archivo de zona directa db.[dominio] con los registros A y CNAME configurados](imagenes/Imagen34.png)
 
 #### C. Configuración de la Zona Inversa (PTR)
 A diferencia de la práctica individual, se implementó una **Zona Inversa**, la cual permite realizar búsquedas inversas (obtener el nombre de dominio a partir de una dirección IP).
@@ -431,7 +431,7 @@ A diferencia de la práctica individual, se implementó una **Zona Inversa**, la
 1. **Declaración en `named.conf.local`:** Se añadió el bloque `zone` con el formato `in-addr.arpa`.
 2. **Creación del archivo de zona inversa:** Se definieron registros **PTR** vinculando los últimos octetos de las IPs con sus respectivos nombres de dominio.
 
-> ![Captura de la edición de named.conf.local y del archivo de zona inversa db.192.168.x](imagenes/imagen35.png)
+> ![Captura de la edición de named.conf.local y del archivo de zona inversa db.192.168.x](imagenes/Imagen35.png)
 
 #### D. Verificación y Reinicio del Servicio
 Se ejecutaron herramientas de diagnóstico para asegurar que la sintaxis de las zonas (directa e inversa) sea correcta y no presente errores de carga.
@@ -441,7 +441,7 @@ Se ejecutaron herramientas de diagnóstico para asegurar que la sintaxis de las 
   * `sudo named-checkzone [dominio] /etc/bind/db.[dominio]`
   * `sudo named-checkzone [red].in-addr.arpa /etc/bind/db.[red]`
 
-> ![Captura de la verificación exitosa de las zonas (OK) y reinicio del servicio BIND9](imagenes/imagen36.png)
+> ![Captura de la verificación exitosa de las zonas (OK) y reinicio del servicio BIND9](imagenes/Imagen36.png)
 
 ### 8.4. Tareas del Integrante 2 (Servidor Web)
 
