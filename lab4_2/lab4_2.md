@@ -503,8 +503,7 @@ Se realizaron pruebas cruzadas para verificar que ambos tipos de resolución (no
 > ![Captura de la terminal del anfitrión mostrando el éxito de nslookup y la resolución inversa (PTR)](imagenes/grupo_test_dns_final.png)
 > ![Captura de la terminal del anfitrión mostrando el éxito de nslookup y la resolución inversa (PTR)](imagenes/grupo_test_dns_final1.png)
 > ![Captura de la terminal del anfitrión mostrando el éxito de nslookup y la resolución inversa (PTR)](imagenes/grupo_test_dns_final2.png)
-
-> ![Captura de la terminal del anfitrión mostrando el éxito de nslookup y la resolución inversa (PTR)](imagenes/imagen37.png)
+> ![Captura de la terminal del anfitrión mostrando el éxito de nslookup y la resolución inversa (PTR)](imagenes/Imagen37.png)
 
 ---
 
